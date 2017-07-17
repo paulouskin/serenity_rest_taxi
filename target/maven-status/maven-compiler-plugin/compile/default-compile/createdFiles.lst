@@ -1,0 +1,7 @@
+net\serenitybdd\taxi\model\locations\Place.class
+net\serenitybdd\taxi\model\locations\TaxiStand.class
+net\serenitybdd\taxi\model\locations\TubeStation.class
+net\serenitybdd\taxi\apis\APICredentials.class
+net\serenitybdd\taxi\model\locations\UnknownTubeStationException.class
+net\serenitybdd\taxi\apis\NotRegisteredException.class
+net\serenitybdd\taxi\apis\TFLPlaces.class

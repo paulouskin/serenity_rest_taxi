@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Find taxi stands by proximity","All the taxi ranks within a given distance should be shown","PENDING","2017-07-13T18:17:06.672+02:00","0.0","1.78"
+"Find taxi stands by proximity","Where there are no taxi stands nearby none should be found","PENDING","2017-07-13T18:17:09.457+02:00","0.0","0.25"

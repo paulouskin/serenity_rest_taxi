@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>List all available place types in different formats</title>
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.4/media/jqueryui/dataTables.jqueryui.css" rel="Stylesheet"/>
+<link type="text/css" href="css/tables.css" rel="stylesheet" />
+
+<script type="text/javascript" src="datatables/1.10.4/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.4/media/jqueryui/dataTables.jqueryui.min.js"></script><!-- ImgPreview -->
+<script src="scripts/imgpreview.full.jquery.js" type="text/javascript"></script>
+</head>
+
+<body class="results-page">
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+        <span class="breadcrumbs">
+            <a href="index.html" class="breadcrumbs">Home</a>
+
+            > <a href="11d0cef45c8f10aae07afe9e9956afe3.html" title="Discover Places (breadcrumbType)">Discover Places</a>
+            > <a href="f8358f850f1c939fbcef093c92745bb3.html" title="Find Available Place Types (breadcrumbType)">Find Available Place&hellip;</a>
+            > List all available place types in different formats
+        </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="e3a5a59a6d792683cf33d050ee0f6f92.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="d782c44557441225cc92a5e35bf4b23b.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 17-07-2017 20:33</span>
+    <br style="clear:left"/>
+</div>
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Find Available Place Types </span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                In order to make my application more flexible
+As an application developer
+I want to know about the types of places supported by the TFL API
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top">
+                            <p class="tag">
+                                <span class="badge tag-badge">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink"
+                                                                      href="11d0cef45c8f10aae07afe9e9956afe3.html">Discover Places
+                                    (capability)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">
+                                    List All Available Place Types In Different Formats
+                                        <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3 class="story-header">Scenario Outline</h3>
+
+        <div class="scenario">When I retrieve all the available place types in &lt;format&gt;<br>Then I should see at least the following place types:<br><table class='embedded'><thead><th>CarPark</th></thead><tbody><tr><td>CyclePark</td></tr><tr><td>SpeedCam</td></tr><tr><td>TaxiRank</td></tr></tbody></table></div>
+
+    </div>
+
+    <div id="beforetable"></div>
+
+
+        <h3 class="story-header">Examples:&nbsp;</h3>
+            <div class="requirementNarrative"></div>
+        <div class="datagrid">
+            <table>
+                <thead>
+                <tr>
+                    <th>#</th>
+                        <th>Format</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="test-SUCCESS"><a href="#0">1</a></td>
+                            <td class="test-SUCCESS"><a href="#0">XML</a>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="test-SUCCESS"><a href="#1">2</a></td>
+                            <td class="test-SUCCESS"><a href="#1">JSON</a>
+                            </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    <div id="tablecontents">
+        <div>
+            <table class="step-table">
+                <tr class="step-titles">
+                    <th width="65">                        &nbsp;
+                    </th>
+
+                    <th width="%" class="step-description-wide-column greentext">
+                        Steps
+                    </th>
+                    <th width="100" class="greentext">Outcome</th>
+                    <th width="75" class="greentext">Duration</th>
+                </tr>
+                <tr class="step-table-separator">
+                    <td colspan="5"></td>
+                </tr>
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        <a name="0"/>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block">
+                                <i class="fa fa-plus-square-o imgstepSection0 success-icon"
+                                   style="margin-left: 20px; float:left;  padding-right:5px"></i>
+                            </a>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block;">
+                            <span class="top-level-step">List all available place types in different formats #1: {format=XML}</span>
+                            </a>
+
+                        </div>
+                    </td>
+                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">3.18s</span></td>
+                </tr>
+                    <tr>
+                    <td colspan="5">
+                    <table id="stepSection0" style="display:none; width:100%">
+
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 40px; margin-right: 5px;"
+                                  class="nested-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-step">When I retrieve all the available place types in XML</span>
+
+                        </div>
+                    </td>
+                    <td width="100"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">2.83s</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 60px; margin-right: 5px;"
+                                  class="nested-group-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-group-step">GET https://api.tfl.gov.uk/Place/Meta/PlaceTypes?app_id=6cbad71f&app_key=18330800264dbe5f532d565b96ffb1a2</span>
+
+                                <span class="rest-query">
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal"
+                            data-target="#restModal-3">
+                        REST Query
+                    </button>
+                </span>
+                <!-- Modal -->
+                <div class="modal fade" id="restModal-3" tabindex="-1" role="dialog"
+                     aria-labelledby="restModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="restModalLabel">
+                                GET https://api.tfl.gov.uk/Place/Meta/PlaceTypes?app_id=6cbad71f&app_key=18330800264dbe5f532d565b96ffb1a2
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                    <p>Status code: 200</p>
+                                    <p>Content Type: null</p>
+                                    <h5>Request Headers</h5>
+                                    <pre>Accept=application/xml, text/xml, application/xhtml+xml</pre>
+                                    <h5>Content Body</h5>
+                                    <pre></pre>
+                                    <h5>Request Cookies</h5>
+                                    <pre></pre>
+                                    <h5>Response Headers</h5>
+                                    <pre>Date: Mon, 17 Jul 2017 18:33:27 GMT<br>Content-Type: application/xml; charset=utf-8<br>Content-Length: 412<br>Connection: keep-alive<br>Set-Cookie: __cfduid=d3d0a042c9c9cd50288b5ac880fdea9781500316406; expires=Tue, 17-Jul-18 18:33:26 GMT; path=/; domain=.tfl.gov.uk; HttpOnly<br>Accept-Ranges: bytes<br>Access-Control-Allow-Headers: Content-Type<br>Access-Control-Allow-Methods: GET,POST,PUT,DELETE,OPTIONS<br>Access-Control-Allow-Origin: *<br>Age: 2318<br>Api-Entity-Payload: PlaceMeta<br>Cache-Control: public, must-revalidate, max-age=43200, s-maxage=86400<br>Content-Encoding: gzip<br>Via: 1.1 varnish<br>X-AspNet-Version: 4.0.30319<br>X-Backend: api<br>X-Banning: <br>X-Cache: HIT<br>X-Cache-Hits: 6<br>X-Cacheable: Yes. Cacheable<br>X-TTL: 86400.000<br>X-TTL-RULE: 0<br>X-Varnish: 1049271823 1048353965<br>Server: cloudflare-nginx<br>CF-RAY: 37ff4a254ec62b09-WAW</pre>
+                                <h5>Response Body</h5>
+                                <pre>&lt;ArrayOfstring xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;<br>  &lt;string&gt;AreaForIntensification&lt;/string&gt;<br>  &lt;string&gt;BikePoint&lt;/string&gt;<br>  &lt;string&gt;Boroughs&lt;/string&gt;<br>  &lt;string&gt;Cabwise&lt;/string&gt;<br>  &lt;string&gt;CarClub&lt;/string&gt;<br>  &lt;string&gt;CarPark&lt;/string&gt;<br>  &lt;string&gt;CensusOutputAreas&lt;/string&gt;<br>  &lt;string&gt;CensusSuperOutputAreas&lt;/string&gt;<br>  &lt;string&gt;CentralActivityZone&lt;/string&gt;<br>  &lt;string&gt;ChargeConnector&lt;/string&gt;<br>  &lt;string&gt;ChargeStation&lt;/string&gt;<br>  &lt;string&gt;CoachBay&lt;/string&gt;<br>  &lt;string&gt;CoachPark&lt;/string&gt;<br>  &lt;string&gt;CyclePark&lt;/string&gt;<br>  &lt;string&gt;JamCam&lt;/string&gt;<br>  &lt;string&gt;OnStreetMeteredBay&lt;/string&gt;<br>  &lt;string&gt;OpportunityAreas&lt;/string&gt;<br>  &lt;string&gt;OtherCoachParking&lt;/string&gt;<br>  &lt;string&gt;OysterTicketShop&lt;/string&gt;<br>  &lt;string&gt;RedLightAndSpeedCam&lt;/string&gt;<br>  &lt;string&gt;RedLightCam&lt;/string&gt;<br>  &lt;string&gt;SpeedCam&lt;/string&gt;<br>  &lt;string&gt;TaxiRank&lt;/string&gt;<br>  &lt;string&gt;VariableMessageSign&lt;/string&gt;<br>  &lt;string&gt;Wards&lt;/string&gt;<br>  &lt;string&gt;WaterfreightBridge&lt;/string&gt;<br>  &lt;string&gt;WaterfreightDock&lt;/string&gt;<br>  &lt;string&gt;WaterfreightJetty&lt;/string&gt;<br>  &lt;string&gt;WaterfreightLock&lt;/string&gt;<br>  &lt;string&gt;WaterfreightOther Access Point&lt;/string&gt;<br>  &lt;string&gt;WaterfreightTunnel&lt;/string&gt;<br>  &lt;string&gt;WaterfreightWharf&lt;/string&gt;<br>&lt;/ArrayOfstring&gt;</pre>
+                                    <h5>Response Cookies</h5>
+                                    <pre>__cfduid=d3d0a042c9c9cd50288b5ac880fdea9781500316406;Path=/;Domain=.tfl.gov.uk;HttpOnly;Expires=17.07.18 18:33</pre>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                </span>
+                        </div>
+                    </td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">0s</span></td>
+                </tr>
+
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 40px; margin-right: 5px;"
+                                  class="nested-group-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-group-step">Then I should see at least the following place types:<br><table class='embedded'><thead><th>CarPark</th></thead><tbody><tr><td>CyclePark</td></tr><tr><td>SpeedCam</td></tr><tr><td>TaxiRank</td></tr></tbody></table></span>
+
+                        </div>
+                    </td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">0.3s</span></td>
+                </tr>
+
+                    </table>
+                    </td>
+                    <tr>
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        <a name="1"/>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                               style="display:block">
+                                <i class="fa fa-plus-square-o imgstepSection1 success-icon"
+                                   style="margin-left: 20px; float:left;  padding-right:5px"></i>
+                            </a>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                               style="display:block;">
+                            <span class="top-level-step">List all available place types in different formats #2: {format=JSON}</span>
+                            </a>
+
+                        </div>
+                    </td>
+                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">0.52s</span></td>
+                </tr>
+                    <tr>
+                    <td colspan="5">
+                    <table id="stepSection1" style="display:none; width:100%">
+
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 40px; margin-right: 5px;"
+                                  class="nested-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-step">When I retrieve all the available place types in JSON</span>
+
+                        </div>
+                    </td>
+                    <td width="100"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">0.46s</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 60px; margin-right: 5px;"
+                                  class="nested-group-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-group-step">GET https://api.tfl.gov.uk/Place/Meta/PlaceTypes?app_id=6cbad71f&app_key=18330800264dbe5f532d565b96ffb1a2</span>
+
+                                <span class="rest-query">
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal"
+                            data-target="#restModal-7">
+                        REST Query
+                    </button>
+                </span>
+                <!-- Modal -->
+                <div class="modal fade" id="restModal-7" tabindex="-1" role="dialog"
+                     aria-labelledby="restModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="restModalLabel">
+                                GET https://api.tfl.gov.uk/Place/Meta/PlaceTypes?app_id=6cbad71f&app_key=18330800264dbe5f532d565b96ffb1a2
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                    <p>Status code: 200</p>
+                                    <p>Content Type: null</p>
+                                    <h5>Request Headers</h5>
+                                    <pre>Accept=application/json, application/javascript, text/javascript</pre>
+                                    <h5>Content Body</h5>
+                                    <pre></pre>
+                                    <h5>Request Cookies</h5>
+                                    <pre></pre>
+                                    <h5>Response Headers</h5>
+                                    <pre>Date: Mon, 17 Jul 2017 18:33:28 GMT<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 293<br>Connection: keep-alive<br>Set-Cookie: __cfduid=d17c857169dd93e4a1837b61da5ee592c1500316407; expires=Tue, 17-Jul-18 18:33:27 GMT; path=/; domain=.tfl.gov.uk; HttpOnly<br>Accept-Ranges: bytes<br>Access-Control-Allow-Headers: Content-Type<br>Access-Control-Allow-Methods: GET,POST,PUT,DELETE,OPTIONS<br>Access-Control-Allow-Origin: *<br>Age: 13204<br>Api-Entity-Payload: PlaceMeta<br>Cache-Control: public, must-revalidate, max-age=43200, s-maxage=86400<br>Content-Encoding: gzip<br>Via: 1.1 varnish<br>X-AspNet-Version: 4.0.30319<br>X-Backend: api<br>X-Banning: <br>X-Cache: HIT<br>X-Cache-Hits: 11<br>X-Cacheable: Yes. Cacheable<br>X-TTL: 86400.000<br>X-TTL-RULE: 0<br>X-Varnish: 928326001 922070074<br>Server: cloudflare-nginx<br>CF-RAY: 37ff4a2cec4c2ab5-WAW</pre>
+                                <h5>Response Body</h5>
+                                <pre>[<br>    &quot;AreaForIntensification&quot;,<br>    &quot;BikePoint&quot;,<br>    &quot;Boroughs&quot;,<br>    &quot;Cabwise&quot;,<br>    &quot;CarClub&quot;,<br>    &quot;CarPark&quot;,<br>    &quot;CensusOutputAreas&quot;,<br>    &quot;CensusSuperOutputAreas&quot;,<br>    &quot;CentralActivityZone&quot;,<br>    &quot;ChargeConnector&quot;,<br>    &quot;ChargeStation&quot;,<br>    &quot;CoachBay&quot;,<br>    &quot;CoachPark&quot;,<br>    &quot;CyclePark&quot;,<br>    &quot;JamCam&quot;,<br>    &quot;OnStreetMeteredBay&quot;,<br>    &quot;OpportunityAreas&quot;,<br>    &quot;OtherCoachParking&quot;,<br>    &quot;OysterTicketShop&quot;,<br>    &quot;RedLightAndSpeedCam&quot;,<br>    &quot;RedLightCam&quot;,<br>    &quot;SpeedCam&quot;,<br>    &quot;TaxiRank&quot;,<br>    &quot;VariableMessageSign&quot;,<br>    &quot;Wards&quot;,<br>    &quot;WaterfreightBridge&quot;,<br>    &quot;WaterfreightDock&quot;,<br>    &quot;WaterfreightJetty&quot;,<br>    &quot;WaterfreightLock&quot;,<br>    &quot;WaterfreightOther Access Point&quot;,<br>    &quot;WaterfreightTunnel&quot;,<br>    &quot;WaterfreightWharf&quot;<br>]</pre>
+                                    <h5>Response Cookies</h5>
+                                    <pre>__cfduid=d17c857169dd93e4a1837b61da5ee592c1500316407;Path=/;Domain=.tfl.gov.uk;HttpOnly;Expires=17.07.18 18:33</pre>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                </span>
+                        </div>
+                    </td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">0s</span></td>
+                </tr>
+
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 40px; margin-right: 5px;"
+                                  class="nested-group-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-group-step">Then I should see at least the following place types:<br><table class='embedded'><thead><th>CarPark</th></thead><tbody><tr><td>CyclePark</td></tr><tr><td>SpeedCam</td></tr><tr><td>TaxiRank</td></tr></tbody></table></span>
+
+                        </div>
+                    </td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">0.06s</span></td>
+                </tr>
+
+                    </table>
+                    </td>
+                    <tr>
+                <tr class="test-SUCCESS">
+                    <td colspan="2"></td>
+                    <td width="100"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>3.83s</em></span></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <div id="beforefooter"></div>
+    <div id="bottomfooter">
+        <span class="version">Serenity BDD version 1.2.3-rc.3</span>
+    </div>
+
+
+    <script type="text/javascript">
+        function toggleDiv(divId) {
+            $("#" + divId).toggle();
+            var imgsrc = $(".img" + divId).attr('src');
+            if (imgsrc == 'images/plus.png') {
+                $(".img" + divId).attr("src", function () {
+                    return "images/minus.png";
+                });
+
+            }
+            else {
+                $(".img" + divId).attr("src", function () {
+                    return "images/plus.png";
+                });
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        $('.example-table table').DataTable({
+            "order": [[0, "asc"]],
+            "pageLength": 25,
+            "scrollX": "100%",
+            "scrollXInner": "100%",
+            "scrollCollapse": true
+        });
+    </script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+
+        $(document).ready(function () {
+            $('img.screenshot').imgPreview({
+                imgCSS: {
+                    width: '500px'
+                },
+                distanceFromCursor: {top: 10, left: -200}
+            });
+        });
+
+        //]]>
+    </script>
+    <div id="imgPreviewContainer" style="position: absolute; top: 612px; left: 355px; display: none; " class=""><img
+            src="" style="display: none; "></div>
+    <div id="imgPreviewContainer2" style="position: absolute; top: 925px; left: 320px; display: none; " class="">
+        <img style="width: 200px; display: none; " src=""></div>
+    <div id="imgPreviewWithStyles" style="position: absolute; top: 1272px; left: 321px; display: none; " class="">
+        <img style="height: 200px; opacity: 1; display: none; " src=""></div>
+    <div id="imgPreviewWithStyles2" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+    <div id="imgPreviewWithStyles3" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Find taxi stands by proximity","All the taxi ranks within a given distance should be shown","ERROR","2017-07-14T17:57:40.839+02:00","0.0","3.18"
+"Find available place types","List all available place types in different formats","SUCCESS","2017-07-17T20:33:23.568+02:00","0.0","3.83"
+"Find taxi stands by name","Provide some info about taxi stands with similar names","SUCCESS","2017-07-17T20:33:28.161+02:00","0.0","0.63"
+"Find taxi stands by location","Provide useful practical information about each taxi rank","SUCCESS","2017-07-17T20:33:28.818+02:00","0.0","0.78"
+"Find taxi stands by location","Provie useful practical information about each taxi rank","PENDING","2017-07-13T18:17:04.012+02:00","0.0","2.62"
+"Find taxi stands by proximity","The closest taxi rank should appear first","SUCCESS","2017-07-14T17:57:44.119+02:00","0.0","0.56"
+"Find taxi stands by proximity","Where there are no taxi stands nearby none should be found","ERROR","2017-07-14T17:57:44.736+02:00","0.0","0.26"

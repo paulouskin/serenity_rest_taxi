@@ -1,0 +1,7 @@
+net\serenitybdd\taxi\glue\TaxiRankPropertyChecker.class
+net\serenitybdd\taxi\glue\FindingTaxiStandSteps.class
+net\serenitybdd\taxi\glue\SettingTheStage.class
+net\serenitybdd\taxi\glue\ListPlaceTypesSteps.class
+net\serenitybdd\taxi\glue\transformers\TubeStationConverter.class
+net\serenitybdd\taxi\features\FindTaxiRanks.class
+net\serenitybdd\taxi\features\DiscoverPlaces.class

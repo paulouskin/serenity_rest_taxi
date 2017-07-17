@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: net.serenitybdd.taxi.features.DiscoverPlaces
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.689 sec - in net.serenitybdd.taxi.features.DiscoverPlaces
