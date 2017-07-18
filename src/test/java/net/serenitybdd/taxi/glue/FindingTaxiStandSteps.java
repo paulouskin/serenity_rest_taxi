@@ -48,20 +48,6 @@ public class FindingTaxiStandSteps {
                 .then().extract().asString();
     }
 
-    @Then("^all of the taxi ranks should be no more than (\\d+) meters away$")
-    public void allOfTheTaxiRanksShouldBeNoMoreThanMetersAway(Float maxDistance) throws Throwable {
-        List<Float> distances = JsonPath.from(jsonResponse).getList(".distance");
-        assertThat(distances, everyItem(lessThan(maxDistance)));
-    }
-
-    @Then("^the first taxi rank should be:$")
-    public void heShouldFindRankStand(List<TaxiStand> closestStands) throws Throwable {
-        TaxiStand closestStand = closestStands.get(0);
-        then().statusCode(200)
-                .body("[0].commonName", equalTo(closestStand.commonName))
-                .body("[0].distance", equalTo(closestStand.distance));
-
-    }
 
     @Then("^no taxi ranks should be returned$")
     public void noTaxiRacksShouldBeReturned() throws Throwable {

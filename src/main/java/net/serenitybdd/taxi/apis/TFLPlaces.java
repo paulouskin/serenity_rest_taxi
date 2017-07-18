@@ -16,16 +16,10 @@ public class TFLPlaces {
     private static final String APP_KEY = APICredentials.fromLocalEnvironment().getAppKey();
     private static final String API_PARAMS = "app_id=%s&app_key=%s";
 
-    private static final String FIND_PLACE_BY_PROXIMITY = BASE_URL + "/Place?type=%s&" + API_PARAMS;
     private static final String FIND_PLACE_TYPES = BASE_URL + "/Place/Meta/PlaceTypes?" + API_PARAMS;
     private static final String FIND_PLACE_BY_NAME = BASE_URL + "/Place/Search?name=%s&types=%s&"+ API_PARAMS;
     private static final String QUERY_TUBE_STOP_POINT = BASE_URL + "/StopPoint/Search/%s?modes=tube&" + API_PARAMS;
     private static final String FIND_TAXI_RANK_BY_STOPPOINT_ID = BASE_URL + "/StopPoint/%s/TaxiRanks?" + API_PARAMS;
-
-
-    public static URL find(Place placeType) throws MalformedURLException {
-        return new URL(String.format(FIND_PLACE_BY_PROXIMITY, placeType, APP_ID, APP_KEY));
-    }
 
     public static URL placeTypes() throws MalformedURLException {
         return new URL(String.format(FIND_PLACE_TYPES, APP_ID, APP_KEY));
