@@ -9,15 +9,15 @@ import cucumber.api.java.en.When;
 import net.serenitybdd.taxi.apis.TFLPlaces;
 import net.serenitybdd.taxi.glue.transformers.TubeStationConverter;
 import net.serenitybdd.taxi.model.locations.Place;
-import net.serenitybdd.taxi.model.locations.TaxiStand;
 import net.serenitybdd.taxi.model.locations.TubeStation;
 
 import java.util.List;
 import java.util.Map;
 
-import static net.serenitybdd.rest.SerenityRest.*;
+import static net.serenitybdd.rest.SerenityRest.given;
+import static net.serenitybdd.rest.SerenityRest.with;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.equalTo;
 
 /**
  * Created by NoteP on 13.07.2017.

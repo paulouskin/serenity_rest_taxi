@@ -6,5 +6,6 @@ package net.serenitybdd.taxi.model.locations;
 public enum Place {
     TaxiRank,
     Bus,
-    Tube
+    Tube,
+    BikeStation
 }
