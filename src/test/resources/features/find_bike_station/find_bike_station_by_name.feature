@@ -4,9 +4,10 @@ Feature: Find bike station by name
   I want to search nearby bike stations
 
   Scenario: Find bike station and provide some information
-    Given Jane is at London Bridge
+    Given Jane come out from Canary Wharf station
     When she looks for the nearby bike station
-    Then next bike points is not so far from her
-    |commonName                     |latitude |longitude|
-    |Snowsfields, London Bridge     |51.502153|-0.083632|
-    |Duke Street Hill, London Bridge|51.506304|-0.087262|
+    Then she should find next bike stations
+    |commonName                     |
+    |South Quay East, Canary Wharf  |
+    |Montgomery Square, Canary Wharf|
+    |Heron Quays DLR, Canary Wharf  |

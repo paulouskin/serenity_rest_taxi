@@ -21,7 +21,7 @@ public class TFLPlaces {
     private static final String QUERY_TUBE_STOP_POINT = BASE_URL + "/StopPoint/Search/%s?modes=tube&" + API_PARAMS;
     private static final String FIND_TAXI_RANK_BY_STOPPOINT_ID = BASE_URL + "/StopPoint/%s/TaxiRanks?" + API_PARAMS;
 
-    private static final String FIND_BIKE_STATION_BY_NAME = BASE_URL + "/BikePoint/Search?query=%s&" + API_PARAMS;
+    private static final String FIND_BIKE_POINT_BY_NAME = BASE_URL + "/BikePoint/Search?query=%s&" + API_PARAMS;
     private static final String FIND_BIKE_POINT_BY_ID = BASE_URL + "/BikePoint/%s?" + API_PARAMS;
 
     public static URL placeTypes() throws MalformedURLException {
@@ -38,5 +38,9 @@ public class TFLPlaces {
 
     public static URL findTaxiRankByStopPointId(String stopPointId) throws MalformedURLException {
         return new URL(String.format(FIND_TAXI_RANK_BY_STOPPOINT_ID, stopPointId, APP_ID, APP_KEY));
+    }
+
+    public static URL findBikePointByName(String bikePointName) throws MalformedURLException {
+        return new URL(String.format(FIND_BIKE_POINT_BY_NAME, bikePointName, APP_ID, APP_KEY));
     }
 }
