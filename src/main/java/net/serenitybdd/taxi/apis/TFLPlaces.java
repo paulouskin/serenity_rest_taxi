@@ -43,4 +43,8 @@ public class TFLPlaces {
     public static URL findBikePointByName(String bikePointName) throws MalformedURLException {
         return new URL(String.format(FIND_BIKE_POINT_BY_NAME, bikePointName, APP_ID, APP_KEY));
     }
+
+    public static URL findBikePointById(String bikePointId) throws MalformedURLException {
+        return new URL(String.format(FIND_BIKE_POINT_BY_ID, bikePointId, APP_ID, APP_KEY));
+    }
 }

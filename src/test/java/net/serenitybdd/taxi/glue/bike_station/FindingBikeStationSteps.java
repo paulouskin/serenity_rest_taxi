@@ -6,15 +6,17 @@ import cucumber.api.Transform;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import cucumber.api.java.it.Ma;
 import net.serenitybdd.taxi.apis.TFLPlaces;
 import net.serenitybdd.taxi.glue.transformers.TubeStationConverter;
 import net.serenitybdd.taxi.model.locations.TubeStation;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import static net.serenitybdd.rest.SerenityRest.get;
 import static net.serenitybdd.rest.SerenityRest.given;
 
 /**
@@ -26,6 +28,8 @@ public class FindingBikeStationSteps {
 
     String jsonResponse;
 
+    List<Map> bikePointsWithAdditionalInfo = new ArrayList<>();
+
     @Given("(?:.*) come out from (.*) station")
     public void userIsCurrentlyIn(@Transform(TubeStationConverter.class) TubeStation tubeStation) {
         this.currentLocation = tubeStation;
@@ -36,14 +40,23 @@ public class FindingBikeStationSteps {
         jsonResponse = given().accept(ContentType.JSON)
                 .when().get(TFLPlaces.findBikePointByName(currentLocation.name))
                 .then().extract().asString();
+        List<Map> bikePoints = JsonPath.from(jsonResponse).getList(".");
+        List ids = bikePoints.stream()
+                .map(x -> x.get("id")).collect(Collectors.toList());
+        for (Object id : ids) {
+            HashMap bikePoint = get(TFLPlaces.findBikePointById((String)id))
+                    .then().extract().jsonPath().get(".");
+            bikePointsWithAdditionalInfo.add(bikePoint);
+        }
+        //System.out.println(bikePointsWithAdditionalInfo.get(0).get("commonName"));
     }
 
     @Then("^s?he should find next bike stations$")
-    public void shouldFindBikeStationsWithNextDetails(List<Map<String,String>> bikePoints) {
-        List<Map> places = JsonPath.from(jsonResponse).get(".");
-        List commonNames = places.stream()
-                .map(x -> x.get("commonName")).collect(Collectors.toList());
-        commonNames.stream().forEach(System.out::println);
+    public void shouldFindBikeStationsWithNextDetails(List<Map<String,String>> bikePoints) throws Throwable {
+        bikePoints.stream().forEach(
+                (Map<String, String> bikeStation) ->
+                        checkBikeStationPropertiesForPlace(bikeStation).existsIn(bikePointsWithAdditionalInfo)
+        );
     }
 
     private BikeStationPropertyChecker checkBikeStationPropertiesForPlace(Map<String, String> bikeStation) {
