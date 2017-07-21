@@ -6,6 +6,7 @@ import cucumber.api.Transform;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.api.java.it.Ma;
 import net.serenitybdd.taxi.apis.TFLPlaces;
 import net.serenitybdd.taxi.glue.transformers.TubeStationConverter;
 import net.serenitybdd.taxi.model.locations.TubeStation;
@@ -43,5 +44,9 @@ public class FindingBikeStationSteps {
         List commonNames = places.stream()
                 .map(x -> x.get("commonName")).collect(Collectors.toList());
         commonNames.stream().forEach(System.out::println);
+    }
+
+    private BikeStationPropertyChecker checkBikeStationPropertiesForPlace(Map<String, String> bikeStation) {
+        return new BikeStationPropertyChecker(bikeStation);
     }
 }
