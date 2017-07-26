@@ -1,5 +1,6 @@
 package net.serenitybdd.taxi.glue;
 
+import com.google.common.collect.ImmutableList;
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.path.json.JsonPath;
 import cucumber.api.Transform;
@@ -8,6 +9,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.taxi.apis.TFLPlaces;
 import net.serenitybdd.taxi.glue.transformers.TubeStationConverter;
+import net.serenitybdd.taxi.helpers.PlacePropertyChecker;
 import net.serenitybdd.taxi.model.locations.Place;
 import net.serenitybdd.taxi.model.locations.TubeStation;
 
@@ -27,6 +29,12 @@ public class FindingTaxiStandSteps {
     TubeStation currentLocation;
 
     String jsonResponse;
+
+    private List<String> taxiProperties = ImmutableList.of(
+            "NumberOfSpaces",
+            "OperationDays",
+            "OperationTimes"
+    );
 
     @Given("(?:.*) is (?:at|planning a getaway from) (.*)")
     public void userIsCurrentlyIn(@Transform(TubeStationConverter.class) TubeStation tubeStation) {
@@ -65,12 +73,12 @@ public class FindingTaxiStandSteps {
     public void shouldFindTheTaxiRankWithTheFollowingDetails(List<Map<String,String>> taxiRanks) throws Throwable {
         List<Map> places = JsonPath.from(jsonResponse).getList(".", Map.class);
         taxiRanks.stream().forEach(
-                (Map<String,String> taxiRank) -> checkThatATaxiRankLike(taxiRank).existsIn(places)
+                (Map<String,String> taxiRank) -> checkThatATaxiRankLike(taxiRank, taxiProperties).existsIn(places)
         );
     }
 
-    private TaxiRankPropertyChecker checkThatATaxiRankLike(Map<String, String> taxiRank) {
-        return new TaxiRankPropertyChecker(taxiRank);
+    private PlacePropertyChecker checkThatATaxiRankLike(Map<String, String> taxiRank, List<String> additionalProperties) {
+        return new PlacePropertyChecker(taxiRank, additionalProperties);
     }
 
 }

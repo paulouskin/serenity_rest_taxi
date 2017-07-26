@@ -1,5 +1,6 @@
 package net.serenitybdd.taxi.glue.bike_station;
 
+import com.google.common.collect.ImmutableList;
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.path.json.JsonPath;
 import cucumber.api.Transform;
@@ -8,6 +9,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.taxi.apis.TFLPlaces;
 import net.serenitybdd.taxi.glue.transformers.TubeStationConverter;
+import net.serenitybdd.taxi.helpers.PlacePropertyChecker;
 import net.serenitybdd.taxi.model.locations.TubeStation;
 
 import java.util.ArrayList;
@@ -30,6 +32,12 @@ public class FindingBikeStationSteps {
 
     List<Map> bikePointsWithAdditionalInfo = new ArrayList<>();
 
+    private List<String> bikeAdditionalProperies = ImmutableList.of(
+            "Locked",
+            "Temporary",
+            "NbDocks"
+    );
+
     @Given("(?:.*) come out from (.*) station")
     public void userIsCurrentlyIn(@Transform(TubeStationConverter.class) TubeStation tubeStation) {
         this.currentLocation = tubeStation;
@@ -48,18 +56,18 @@ public class FindingBikeStationSteps {
                     .then().extract().jsonPath().get(".");
             bikePointsWithAdditionalInfo.add(bikePoint);
         }
-        //System.out.println(bikePointsWithAdditionalInfo.get(0).get("commonName"));
     }
 
     @Then("^s?he should find next bike stations$")
     public void shouldFindBikeStationsWithNextDetails(List<Map<String,String>> bikePoints) throws Throwable {
+
         bikePoints.stream().forEach(
                 (Map<String, String> bikeStation) ->
-                        checkBikeStationPropertiesForPlace(bikeStation).existsIn(bikePointsWithAdditionalInfo)
+                        checkBikeStationPropertiesForPlace(bikeStation, bikeAdditionalProperies).existsIn(bikePointsWithAdditionalInfo)
         );
     }
 
-    private BikeStationPropertyChecker checkBikeStationPropertiesForPlace(Map<String, String> bikeStation) {
-        return new BikeStationPropertyChecker(bikeStation);
+    private PlacePropertyChecker checkBikeStationPropertiesForPlace(Map<String, String> bikeStation, List<String> additionalProperties) {
+        return new PlacePropertyChecker(bikeStation, additionalProperties);
     }
 }
